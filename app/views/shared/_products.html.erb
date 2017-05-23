@@ -3,6 +3,12 @@
 		<% products.each do |product| %>
 			<div class="col-md-4">
 				<div class="well">
+					<% if product.image %>
+						<%= image_tag product.image %>
+					<% end %>
+					<% if !product.image %>
+						<h2>...no product image yet..</h2>
+					<% end %>
 					<h2><%= product.name %></h2>
 					<p><%= product.description %></p>
 					<hr>
