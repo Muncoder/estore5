@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   resources :products
 
+  get 'my_products' => 'products#my_products'
+
 end
