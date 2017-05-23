@@ -1,0 +1,13 @@
+<div class="container">
+	<h1>Product Details</h1>
+	<hr>
+	<div class="well">
+		<h2><%= @product.name %></h2>
+		<p><%= @product.description %></p>
+		<hr>
+		<p> <strong>Price:</strong> <%= @product.price %></p>
+	</div>
+	<hr>
+	<%= link_to "All Product", products_path, class: "btn btn-default" %>
+</div>
+
