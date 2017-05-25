@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
     if @product.save
       flash[:notice] = "Product saved successfully"
-      redirect_to root_path
+      redirect_to products_path
     else
       flash[:notice] = "Error ! could not be saved"
       render "new"
@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
     prod_name = Product.find(params[:id])
     @product.delete
     flash[:notice] = "Product #{prod_name.name} deleted successfully"
-    redirect_to root_path
+    redirect_to products_path
   end
 
   def my_products
